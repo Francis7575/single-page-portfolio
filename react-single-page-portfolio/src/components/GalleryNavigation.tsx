@@ -24,11 +24,11 @@ const GalleryNavigation = ({ images, currentIndex, setCurrentIndex }: GalleryNav
 
     return (
         <div className='flex justify-center gap-4 mt-[1.81rem] md:mt-[3.5rem]'>
-            <button className='bg-black py-[1.37rem] min-w-[4rem] flex justify-center rounded-[4rem]'
+            <button className='bg-black py-[1.37rem] min-w-[4rem] flex justify-center rounded-[4rem] hover:bg-galatic-blue'
                 onClick={previousImage}>
                 <img src={leftArrow} alt="Previous Image" />
             </button>
-            <button className='bg-black py-[1.37rem] min-w-[4rem] flex justify-center rounded-[4rem]'
+            <button className='bg-black py-[1.37rem] min-w-[4rem] flex justify-center rounded-[4rem] hover:bg-galatic-blue'
                 onClick={nextImage}>
                 <img src={rightArrow} alt="Next Image" />
             </button>
