@@ -8,7 +8,7 @@ import { useState } from 'react'
 
 const ImagesGallery = () => {
     const images = [slideOne, slideTwo, slideThree, slideFour, slideFive];
-    const [currentIndex, setCurrentIndex] = useState<number>(0);
+    const [currentIndex, setCurrentIndex] = useState<number>(2);
     const gap = -15;
 
     const calculateTransform = () => {
@@ -20,9 +20,9 @@ const ImagesGallery = () => {
             <h2 className='text-center text-black text-[1.5rem] md:text-[2rem] font-bold'>
                 My Work
             </h2>
-            <div className='flex justify-center overflow-hidden gap-[.938rem] md:gap-[1.875rem] mt-8 lg:mt-[3.5rem]'>
+            <div className='flex overflow-hidden gap-[.938rem] md:gap-[1.875rem] mt-8 lg:mt-[3.5rem]'>
                 {images.map((image, index) => (
-                    <img key={index} src={image} alt="" className='w-[270px] md:w-[540px] rounded-[.625rem]'
+                    <img key={index} src={image} alt="" className={`w-[270px] md:w-[540px] rounded-[.625rem] ml-[1rem]`}
                         style={{ transform: calculateTransform() }} />
                 ))}
             </div>
