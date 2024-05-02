@@ -8,16 +8,16 @@ import motiongraphicsPattern from '/assets/pattern-motion-graphics.svg'
 type patterns = {
     pattern: string,
     label: string,
-    className: string | string[]
+    className?: string | string[]
 }
 
 const patterns = [
     { pattern: graphicPattern, label: 'Graphic Design', className: ['col-span-2', 'row-span-2'] },
-    { pattern: uiuxPattern, label: 'UI/UX', className: 'uiux-container' },
-    { pattern: appsPattern, label: 'Apps', className: 'apps-container' },
-    { pattern: illustrationPattern, label: 'Illustration', className: ['col-span-2', 'order-1'] },
+    { pattern: uiuxPattern, label: 'UI/UX' },
+    { pattern: appsPattern, label: 'Apps' },
+    { pattern: illustrationPattern, label: 'Illustration', className: ['col-span-2', 'lg:order-1'] },
     { pattern: photographyPattern, label: 'Photography', className: 'col-span-2' },
-    { pattern: motiongraphicsPattern, label: 'Motion Graphics', className: ['col-span-2', 'order-2'] }
+    { pattern: motiongraphicsPattern, label: 'Motion Graphics', className: ['col-span-2', 'lg:order-2'] }
 ];
 
 const GridItems = () => {
@@ -29,7 +29,7 @@ const GridItems = () => {
             {patterns.map(({ pattern, label, className }, index) => (
                 <div key={index} className={`flex flex-col justify-between items-start p-6 rounded-[.5rem] ${bgColors[index]} 
                     ${Array.isArray(className) ? className.join(' ') : className}`}>
-                    <img src={pattern} alt="" className='self-end'/>
+                    <img src={pattern} alt="" className='self-end' />
                     <p className='text-white text-[1.5rem] font-bold'>
                         {label}
                     </p>

@@ -22,7 +22,7 @@ const ImagesGallery = () => {
             </h2>
             <div className='flex overflow-hidden gap-[.938rem] md:gap-[1.875rem] mt-8 lg:mt-[3.5rem]'>
                 {images.map((image, index) => (
-                    <img key={index} src={image} alt="" className={`w-[270px] md:w-[540px] rounded-[.625rem] ml-[1rem]`}
+                    <img key={index} src={image} alt="" className={`w-[270px] md:w-[540px] rounded-[.625rem] ml-[1.1rem]`}
                         style={{ transform: calculateTransform() }} />
                 ))}
             </div>
